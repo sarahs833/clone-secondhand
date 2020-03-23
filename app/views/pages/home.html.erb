@@ -1,4 +1,4 @@
 <h1>Pages#home</h1>
 <% @products.each do |p| %>
-  <h1><%= p.name%></h1>
+  <%= link_to p.name, show_product_path(p.id) %>
 <%end%>
