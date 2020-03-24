@@ -16,8 +16,9 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem "bootstrap_form", "~> 4.0"
-gem 'pundit'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
+gem 'carrierwave'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

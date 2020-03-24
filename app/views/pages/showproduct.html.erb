@@ -1,3 +1,4 @@
 <h1><%= @product.name%></h1>
 <h1><%= @product.price%></h1>
 <p><%= @product.user.name%></p>
+<%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>

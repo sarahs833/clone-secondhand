@@ -1,8 +1,6 @@
 <h1>My Dashboard</h1>
-<%@products.each do |p| %>
-
-<h2>Your product: <%= p.name %> Price: <%= p.price %></h2>
-<%= link_to "Update", "/products/#{p.id}/edit", {:product => p.id} %>
-<%=link_to "Delete", "/products/#{p.id}", :method => 'delete' %>
-
+<% @products.each do |p| %>
+  <h2>Your product: <%= p.name %> Price: <%= p.price %></h2>
+  <%= link_to "Update", "/products/#{p.id}/edit" %>
+  <%=link_to "Delete", "/products/#{p.id}", :method => 'delete' %>
 <%end %>

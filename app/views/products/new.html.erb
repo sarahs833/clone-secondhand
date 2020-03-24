@@ -4,5 +4,7 @@
 <%= bootstrap_form_tag(model: @product, local: true) do |f| %>
   <%= f.text_field :name %>
   <%= f.text_field :price %>
+  <%= f.text_field :photo %>
+  <%= f.text_field :photo_cache, as: :hidden %>
   <%= f.submit "Submit" %>
 <% end %>
