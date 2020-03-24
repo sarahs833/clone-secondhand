@@ -21,11 +21,14 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    authorize @product
   end
 
   def update
     @product = Product.find(params[:id])
+    authorize @product
     @product.update(params_product)
+    redirect_to '/products/user'
   end
 
   def destroy
