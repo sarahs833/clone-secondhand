@@ -8,6 +8,12 @@ class ProductsController < ApplicationController
     @product = Product.new(params_product)
     @product.user = current_user
     @product.save
+    redirect_to "/"
+  end
+
+  def user
+    @user = current_user
+    @products = Product.where(user_id: @user.id)
   end
 
   private
