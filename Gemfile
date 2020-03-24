@@ -17,6 +17,7 @@ gem 'webpacker'
 gem 'devise'
 gem "bootstrap_form", "~> 4.0"
 gem 'pundit'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development do
   gem 'web-console', '>= 3.3.0'
