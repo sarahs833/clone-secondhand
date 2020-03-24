@@ -4,5 +4,8 @@ Rails.application.routes.draw do
 
 
   get 'pages/:id' => 'pages#showproduct', as: 'show_product'
+
+  get 'products/new' => 'products#new', as: 'new_product'
+  post 'products' => 'products#create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

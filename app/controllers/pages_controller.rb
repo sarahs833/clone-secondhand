@@ -6,4 +6,21 @@ class PagesController < ApplicationController
   def showproduct
     @product = Product.find(params[:id])
   end
+
+  def addproduct
+    @product = Product.new
+  end
+
+  def createproduct
+    @product = Product.new(params_product)
+    @product.user = current_user
+    @product.save
+  end
+
+  private
+
+  def params_product
+    params.require(:product).permit(:name, :price)
+  end
+
 end
