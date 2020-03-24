@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-      end
+    end
 
   def create
     @product = Product.new(params_product)

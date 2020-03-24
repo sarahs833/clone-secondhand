@@ -8,10 +8,4 @@ class PagesController < ApplicationController
   end
 
 
-  private
-
-  def params_product
-    params.require(:product).permit(:name, :price)
-  end
-
 end

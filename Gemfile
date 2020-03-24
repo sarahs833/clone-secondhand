@@ -18,7 +18,7 @@ gem 'devise'
 gem "bootstrap_form", "~> 4.0"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -1,10 +1,18 @@
-<h1>Product form </h1>
 
+<div class="container">
+  <h1>Product form </h1>
 
-<%= bootstrap_form_tag(model: @product, local: true) do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_field :price %>
-  <%= f.text_field :photo %>
+<%= form_for @product do |f| %>
+  <%= f.label 'product name' %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label 'product price' %><br>
+  <%= f.text_area :price %><br>
+
+  <%= f.file_field :photo %>
   <%= f.text_field :photo_cache, as: :hidden %>
-  <%= f.submit "Submit" %>
-<% end %>
+
+  <%= f.submit "Submit update" %>
+  <% end %>
+
+</div>

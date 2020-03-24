@@ -240,7 +240,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   bootstrap_form (~> 4.0)
-  carrierwave
+  carrierwave (~> 1.2)
   cloudinary
   devise
   dotenv-rails
