@@ -1,3 +1,7 @@
 <% @bookings.each do |b| %>
 <h2><%=b.product.name%></h2>
+<div style="display:flex;">
+  <p class="text-muted" style="margin-right:4rem">Total: <%=b.product.price%> rmb</p>
+  <p class="text-muted"><%=time_ago_in_words(b.created_at)%></p>
+</div>
 <% end %>
