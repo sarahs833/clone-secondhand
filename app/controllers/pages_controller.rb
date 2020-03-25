@@ -5,7 +5,10 @@ class PagesController < ApplicationController
   end
   def showproduct
     @product = Product.find(params[:id])
+    if @product.user_id == current_user.id
+      render action: 'showproduct' and return
+    else
+      render action: 'others_product'
+    end
   end
-
-
 end
