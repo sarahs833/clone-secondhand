@@ -3,3 +3,12 @@
 <h3>Purchase date: <%=Date.today%></h3>
 <h3>Purchasing product name:<%=@product.name %></h3>
 <h3>Total:<%= @product.price%> rmb</h3>
+
+<%= form_for [@product,@booking] do |f| %>
+<%= f.submit "Pay" %>
+<% end %>
+
+<!-- <button><%= link_to "/products/@product.id/bookings", method: :post, remote:true do %>
+<%end%>
+buy</button>
+ -->

@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.where(user_id: current_user.id).includes(:product)
+  end
+
   def show
 
   end
@@ -9,12 +13,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(params_booking)
-    @user = current_user
     @product = Product.find(params[:product_id])
-    @booking.user = @user
-    @booking.product_id = @product_id
+    @booking = Booking.new(product_id: @product.id, user_id: current_user.id, paid:true)
     @booking.save
+    redirect_to '/'
   end
 
   def edit
