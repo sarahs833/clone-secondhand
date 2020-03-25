@@ -5,7 +5,10 @@
   <%= f.text_field :name %><br>
 
   <%= f.label 'product price' %><br>
-  <%= f.text_area :price %><br>
+  <%= f.text_field :price %><br>
+
+  <%= f.file_field :photo %>
+  <%= f.hidden_field :photo_cache %>
 
   <%= f.submit "Submit update" %>
 <% end %>

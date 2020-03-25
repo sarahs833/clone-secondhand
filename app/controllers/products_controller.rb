@@ -8,6 +8,10 @@ class ProductsController < ApplicationController
     @product = Product.new(params_product)
     @product.user = current_user
     @product.save
+    if @product.user.seller == false
+      @product.user.seller = true
+      @product.user.save
+    end
     redirect_to "/"
   end
 

@@ -1,16 +1,16 @@
 
 <div class="container">
-  <h1>Product form </h1>
+  <h1>Sell my Product </h1>
 
 <%= form_for @product do |f| %>
   <%= f.label 'product name' %><br>
   <%= f.text_field :name %><br>
 
   <%= f.label 'product price' %><br>
-  <%= f.text_area :price %><br>
+  <%= f.text_field :price %><br>
 
   <%= f.file_field :photo %>
-  <%= f.text_field :photo_cache, as: :hidden %>
+  <%= f.hidden_field :photo_cache %>
 
   <%= f.submit "Submit update" %>
   <% end %>

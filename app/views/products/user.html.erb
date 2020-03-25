@@ -1,6 +1,7 @@
 <h1>My Dashboard</h1>
 <% @products.each do |p| %>
   <h2>Your product: <%= p.name %> Price: <%= p.price %></h2>
+  <%= cl_image_tag p.photo, height: 300, width: 300 %>
   <%= link_to "Update", "/products/#{p.id}/edit" %>
   <%=link_to "Delete", "/products/#{p.id}", :method => 'delete' %>
 <%end %>

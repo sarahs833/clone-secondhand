@@ -1,4 +1,6 @@
 <h1><%= @product.name%></h1>
-<h1><%= @product.price%></h1>
+<h1><%= @product.price%> rmb</h1>
 <p><%= @product.user.name%></p>
 <%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>
+
+<button><%=link_to "book now", new_product_booking_path(@product.id) %></button>
