@@ -24,7 +24,7 @@
           <%= image_tag "smiley.jpg", class: "avatar dropdown-toggle", style:"border-redius:50%;width:40px;height:40px", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "my bookings", "/products/:products_id/bookings", class: "dropdown-item" %>
-            <%= link_to "Messages", "#", class: "dropdown-item" %>
+            <%= link_to "Chats", chats_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
