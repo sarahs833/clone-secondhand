@@ -10,12 +10,16 @@
   <div class="col">
     <div class="chat">
       <% @chat_messages.each do |chat_message| %>
-       <h3><%=chat_message.user.name%>: "<%= chat_message.content %>"</h3>
+      <% if chat_message.user_id == current_user.id %>
+        <h3>me: "<%=chat_message.content%>"</h3>
+      <% else %>
+        <h3><%=chat_message.user.name%>: "<%= chat_message.content %>"</h3>
+      <%end %>
        <p><%=time_ago_in_words(chat_message.created_at)%></p>
       <% end %>
     </div>
 
-    <%= form_for Message.new do |f| %>
+    <%= form_for Message.new, :html => {:class => 'press'} do |f| %>
       <div class="input-group mb-3">
         <%= f.label "new message" %>
         <%= f.text_field :content,class: 'chat-input'%>
