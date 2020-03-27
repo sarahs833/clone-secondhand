@@ -4,7 +4,8 @@ class Chat < ApplicationRecord
 
   after_create :create_first_message
 
+
   def create_first_message
-    Message.create(chat_id: self.id, user_id: current_user.id, content: "Hi, i have just booked your product")
+    Message.create(chat_id: self.id, user_id: self.booker, content: "Hi, i have just booked your product")
   end
 end
