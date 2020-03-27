@@ -10,24 +10,20 @@
   <div class="col">
     <div class="chat">
       <% @chat_messages.each do |chat_message| %>
-        <%= chat_message %>
+       <h3><%= chat_message.content %></h3>
       <% end %>
     </div>
 
-    <%= simple_form_for @message, remote: true do |form| %>
+    <%= form_for Message.new do |f| %>
       <div class="input-group mb-3">
-        <%= form.input :content, as: :string,
-                                 wrapper: false,
-                                 label: false,
-                                 input_html: {
-                                   class: 'chat-input'
-                                 } %>
+        <%= f.label "new message" %>
+        <%= f.text_field :content,class: 'chat-input'%>
         <div class="input-group-append">
-          <%= form.submit "Send", class: 'btn btn-primary chat-input' %>
+          <%= f.submit "Send", class: 'btn btn-primary chat-input' %>
         </div>
       </div>
 
-      <%= form.input :room_id, as: :hidden %>
+      <%= f.hidden_field :chat_id,:value => @chat.id %>
     <% end %>
   </div>
 </div>
