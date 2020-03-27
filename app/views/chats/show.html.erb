@@ -11,6 +11,7 @@
     <div class="chat">
       <% @chat_messages.each do |chat_message| %>
        <h3><%=chat_message.user.name%>: "<%= chat_message.content %>"</h3>
+       <p><%=time_ago_in_words(chat_message.created_at)%></p>
       <% end %>
     </div>
 
