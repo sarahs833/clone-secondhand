@@ -11,6 +11,8 @@ class ChatsController < ApplicationController
 
   def show
     @chat = Chat.find(params[:id])
-    @chat_messages = @chat.messages.includes(:user)
+    if @chat.booker == current_user.id || @chat.seller_id == current_user.id
+      @chat_messages = @chat.messages.includes(:user)
+    end
   end
 end
