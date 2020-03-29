@@ -1,21 +1,21 @@
 
 <div class="container text-center" style="margin-top:10vh">
-  <h1>Sell my Product </h1>
+  <h1 style="margin-bottom:35px">Sell my Product </h1>
 
 <%= form_for @product do |f| %>
   <%= f.label 'product name'%><br>
-  <%= f.text_field :name ,style:"width:300px"%><br>
+  <%= f.text_field :name ,style:"width:300px;margin-bottom:15px"%><br>
 
   <%= f.label 'product price'%><br>
-  <%= f.text_field :price ,style:"width:300px"%><br>
+  <%= f.text_field :price ,style:"width:300px;margin-bottom:15px"%><br>
 
   <%= f.label 'product description'%><br>
-  <%= f.text_area :description ,style:"width:300px" %><br>
-
-  <%= f.file_field :photo %>
-  <%= f.hidden_field :photo_cache %>
-
-  <%= f.submit "Submit update" %>
+  <%= f.text_area :description ,style:"width:300px;margin-bottom:15px" %><br>
+  <div>
+  <%= f.file_field :photo , style:"margin-left:100px;margin-bottom:15px"%>
+  <%= f.hidden_field :photo_cache, class:"text-center" %>
+  </div>
+  <%= f.submit "Submit update", style:"color:white;margin-top:30px;background:rgb(0, 115, 188);border:none;padding-left:25px;padding-right:25px;padding-top:10px;padding-bottom:10px" %>
   <% end %>
 
 </div>
