@@ -1,13 +1,21 @@
 
-<div>
-  <h1>It's your product ;)</h1>
-  <h1><%= @product.name%></h1>
-  <p><%= current_user.name%></p>
-  <%= cl_image_tag @product.photo, height: 400, width: 400 %>
-  <h1><%= @product.price%> rmb</h1>
-  <div>
-    <h3>Product description:</h3>
-    <h3><%= @product.description %></h3>
-</div>
+
+<div class="container" style="display:flex;align-items: center;margin-top:50px">
+  <div class="container" style="margin-top:30px;margin-bottom:30px">
+    <%= cl_image_tag @product.photo, height: 400, width: 400 %>
+  </div>
+
+  <div class="container" style="border:1px solid white;padding:50px">
+    <div class="alert alert-warning" role="alert">
+      Hi,it's your product ;)
+    </div>
+    <h1><%= @product.name%></h1>
+    <p>seller name: <%= current_user.name%></p>
+    <p>sell price: <%= @product.price%> rmb</p>
+    <div style="margin-top:25px">
+      <h3>Product description:</h3>
+      <p><%= @product.description %></p>
+    </div>
+  </div>
 </div>
 
