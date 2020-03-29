@@ -5,12 +5,12 @@
     <%= cl_image_tag @product.photo, height: 400, width: 400 %>
   </div>
 
-  <div class="container" style="border:1px solid white;padding:50px">
+  <div class="container text-center" style="border:1px solid white;padding:50px">
     <div class="alert alert-warning" role="alert">
       Hi,it's your product ;)
     </div>
-    <h1><%= @product.name%></h1>
-    <p>seller name: <%= current_user.name%></p>
+    <h1 style="margin-bottom:30px"><%= @product.name%></h1>
+    <p>seller name: <%= @product.user.name%></p>
     <p>sell price: <%= @product.price%> rmb</p>
     <div style="margin-top:25px">
       <h3>Product description:</h3>

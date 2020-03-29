@@ -1,16 +1,16 @@
 
-<div class="container">
+<div class="container text-center" style="margin-top:10vh">
   <h1>Sell my Product </h1>
 
 <%= form_for @product do |f| %>
-  <%= f.label 'product name' %><br>
-  <%= f.text_field :name %><br>
+  <%= f.label 'product name'%><br>
+  <%= f.text_field :name ,style:"width:300px"%><br>
 
-  <%= f.label 'product price' %><br>
-  <%= f.text_field :price %><br>
+  <%= f.label 'product price'%><br>
+  <%= f.text_field :price ,style:"width:300px"%><br>
 
-  <%= f.label 'product description' %><br>
-  <%= f.text_area :description %><br>
+  <%= f.label 'product description'%><br>
+  <%= f.text_area :description ,style:"width:300px" %><br>
 
   <%= f.file_field :photo %>
   <%= f.hidden_field :photo_cache %>

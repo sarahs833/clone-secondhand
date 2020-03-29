@@ -1,10 +1,14 @@
 
-<div>
-  <h1><%= @product.name%></h1>
-  <p><%= current_user.name%></p>
-  <%= cl_image_tag @product.photo, height: 400, width: 400 %>
-  <h1><%= @product.price%> rmb</h1>
-  <h3><%= @product.description %></h3>
+<div class="container" style="display:flex;align-items: center;margin-top:50px;margin-bottom:50px">
+  <div class="container">
+    <%= cl_image_tag @product.photo, height: 400, width: 400 %>
+  </div>
+  <div class="container text-center" style="border:1px solid white;padding:50px">
+    <h1 style="margin-bottom:30px"><%= @product.name%></h1>
+    <p>seller name: <%= @product.user.name%></p>
+    <p>sell price: <%= @product.price%> rmb</p>
+    <p><%= @product.description %></p>
+    <button style="background:rgb(0, 115, 188);border:none;padding-left:25px;padding-right:25px;padding-top:10px;padding-bottom:10px;margin-top:20px"><%=link_to "book now", new_product_booking_path(@product.id), style:"text-decoration:none;color:white;background:rgb(0, 115, 188)" %></button>
+  </div>
 </div>
 
-<button><%=link_to "book now", new_product_booking_path(@product.id) %></button>

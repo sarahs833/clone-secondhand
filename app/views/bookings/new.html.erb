@@ -1,14 +1,15 @@
-<h1 class="text-center">New Booking</h1>
-<% time = Time.new %>
-<h3>Purchase date: <%=Date.today%></h3>
-<h3>Purchasing product name:<%=@product.name %></h3>
-<h3>Total:<%= @product.price%> rmb</h3>
+<div class="container text-center" style="margin-top:20vh">
+  <h1 class="text-center">New Booking</h1>
+  <div style="margin-top:25px">
+    <% time = Time.new %>
+    <h4>Purchase date: <%=Date.today%></h4>
+    <h4>Purchasing product name: <%=@product.name %></h4>
+    <h4>Total: <%= @product.price%> rmb</h4>
 
-<%= form_for [@product,@booking] do |f| %>
-<%= f.submit "Pay" %>
-<% end %>
+    <%= form_for [@product,@booking] do |f| %>
+    <%= f.submit "Pay",style:"margin-top:20px;text-decoration:none;color:white;background:rgb(0, 115, 188);border:none;padding-left:40px;padding-right:40px;padding-top:8px;padding-bottom:8px" %>
+    <% end %>
+  </div>
+</div>
 
-<!-- <button><%= link_to "/products/@product.id/bookings", method: :post, remote:true do %>
-<%end%>
-buy</button>
- -->
+
