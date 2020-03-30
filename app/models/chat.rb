@@ -8,4 +8,9 @@ class Chat < ApplicationRecord
   def create_first_message
     Message.create(chat_id: self.id, user_id: self.booker, content: "Hi, i have just booked your product")
   end
+
+  def self.isOrNotNew(id)
+    chat = Chat.where(id: id)
+    chat.update(new:false)
+  end
 end

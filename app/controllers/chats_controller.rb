@@ -10,6 +10,7 @@ class ChatsController < ApplicationController
   end
 
   def show
+    @c = Chat.isOrNotNew(params[:id])
     @chat = Chat.find(params[:id])
     if @chat.booker == current_user.id || @chat.seller_id == current_user.id
       @chat_messages = @chat.messages.includes(:user)
