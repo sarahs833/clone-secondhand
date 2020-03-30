@@ -6,6 +6,6 @@ class Booking < ApplicationRecord
   after_create :create_chat
 
   def create_chat
-    Chat.create(booking_id: self.id, name: "chat #{self.id}", booker: self.user.id, seller_id: self.product.user.id)
+    Chat.create(booking_id: self.id, name: "chat #{self.id}", booker: self.user.id, seller_id: self.product.user.id, new: true)
   end
 end
