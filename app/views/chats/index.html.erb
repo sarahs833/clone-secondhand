@@ -1,8 +1,10 @@
 <div class="container">
   <% @chats.each do |chat| %>
   <div class="list-group">
-      <button type="button" class="list-group-item list-group-item-action">
-        <%=link_to chat.name, chat_path(chat) %>
+  <% c = 0 %>
+      <button type="button" class="list-group-item list-group-item-action" style="display:flex;justify-content: space-between;align-items:center">
+        <%=link_to chat.name, chat_path(chat),class:'chat' , :data => { :ind => chat.id } %>
+        <p class="display" data-number='<%=chat.id%>' style="background: red;color: white;border-radius: 50%;width: 50px;height: 50px;text-align: center;font-size: 10px;padding:5px">new message</p>
       </button>
   </div>
   <%end%>
