@@ -1,7 +1,12 @@
-<% @bookings.each do |b| %>
-<h2><%=b.product.name%></h2>
-<div style="display:flex;">
-  <p class="text-muted" style="margin-right:4rem">Total: <%=b.product.price%> rmb</p>
-  <p class="text-muted"><%=time_ago_in_words(b.created_at)%></p>
+<div class="flex flex-column">
+  <h1 class="text-center" style="margin-top:50px;margin-bottom:50px">My bookings history</h1>
+  <% @bookings.each do |b| %>
+  <div class="text-center" style="margin:30px;background:rgb(0, 115, 188);width:40%;padding:30px;border-radius:10px">
+    <h3><%=b.product.name%></h3>
+    <div style="display:flex;justify-content: center;align-items: center;padding-top:10px">
+      <p style="margin-right:4rem">Total: <%=b.product.price%> rmb</p>
+      <p>created: <%=time_ago_in_words(b.created_at)%></p>
+    </div>
+  </div>
+  <% end %>
 </div>
-<% end %>

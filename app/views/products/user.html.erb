@@ -1,7 +1,20 @@
-<h1>My Dashboard</h1>
-<% @products.each do |p| %>
-  <h2>Your product: <%= p.name %> Price: <%= p.price %></h2>
-  <%= cl_image_tag p.photo, height: 300, width: 300 %>
-  <%= link_to "Update", "/products/#{p.id}/edit" %>
-  <%=link_to "Delete", "/products/#{p.id}", :method => 'delete' %>
-<%end %>
+<div class="container text-center width_50" style="margin-top:30px">
+  <h1 style="margin-bottom:30px">My Dashboard</h1>
+  <% @products.each do |p| %>
+  <div class="flex margin_bottom white_border">
+      <div>
+        <%= cl_image_tag p.photo,height:300, width:300,:transformation => [{:radius => 'max'}] %>
+      </div>
+      <div class="width_100 pd">
+        <div class="tc margin_bottom">
+          <h4>Product name: <%= p.name %></h4>
+          <h4> Price: <%= p.price %> rmb</h4>
+        </div>
+        <div class="tc">
+          <%= link_to "Update", "/products/#{p.id}/edit", style:"text-decoration:none;color:white;background:rgb(0, 115, 188);padding:10px" %>
+          <%=link_to "Delete", "/products/#{p.id}", :method => 'delete' , style:"text-decoration:none;color:white;background:red;padding:10px"%>
+        </div>
+      </div>
+    </div>
+  <%end %>
+</div>

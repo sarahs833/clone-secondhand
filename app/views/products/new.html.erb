@@ -4,13 +4,13 @@
 
 <%= form_for @product do |f| %>
   <%= f.label 'product name'%><br>
-  <%= f.text_field :name ,style:"width:300px;margin-bottom:15px"%><br>
+  <%= f.text_field :name ,style:"width:500px;margin-bottom:15px"%><br>
 
   <%= f.label 'product price'%><br>
-  <%= f.text_field :price ,style:"width:300px;margin-bottom:15px"%><br>
+  <%= f.text_field :price ,style:"width:500px;margin-bottom:15px"%><br>
 
   <%= f.label 'product description'%><br>
-  <%= f.text_area :description ,style:"width:300px;margin-bottom:15px" %><br>
+  <%= f.text_area :description ,style:"width:500px;margin-bottom:15px" %><br>
   <div>
   <%= f.file_field :photo , style:"margin-left:100px;margin-bottom:15px"%>
   <%= f.hidden_field :photo_cache, class:"text-center" %>
