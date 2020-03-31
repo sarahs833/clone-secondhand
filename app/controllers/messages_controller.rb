@@ -9,8 +9,15 @@ def create
   @message.user_id = current_user.id
   @message.chat_id = params[:message][:chat_id]
   @message.save
-  @m = Message.change_chat_new(params[:message][:chat_id])
-  redirect_back(fallback_location: root_path)
+
+  @bookings = Booking.all.includes(:product)
+   @bookings.each do |b|
+     @seller_id = b.product.user_id == current_user.id
+   end
+    @chats = Chat.where(booker: current_user.id).includes(:messages)
+    .or(Chat.where(seller_id: @seller_id).includes(:messages))
+  render "chats/index"
+  # redirect_back(fallback_location: root_path)
 end
 
 private
