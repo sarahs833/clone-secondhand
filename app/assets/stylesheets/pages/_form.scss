@@ -4,9 +4,19 @@
 .input-field {
   width:500px;margin-bottom:15px
 }
+.edit-container {
+  margin-top:10vh;border:1px solid white;padding:30px;width:40%
+}
+
+.edit-input {
+    width:500px;margin-bottom:15px;color:#f8b195
+  }
 
 @media screen and (max-width: 992px) {
   .form-container {
+    width:80%
+  }
+  .edit-container {
     width:80%
   }
 }
@@ -23,5 +33,12 @@
   }
   .input-field {
     width:300px
+  }
+  .edit-container {
+    width:100vw;
+    margin-left:80px
+  }
+  .edit-input {
+    width:300px;margin-bottom:15px;color:#f8b195
   }
 }

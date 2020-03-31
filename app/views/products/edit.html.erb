@@ -1,15 +1,15 @@
-<div class="container text-center" style="margin-top:10vh;border:1px solid white;padding:30px;width:40%">
+<div class="container text-center edit-container">
   <h1 style="margin-bottom:35px">Edit product</h1>
 
   <%= form_for @product do |f| %>
     <%= f.label 'product name' %><br>
-    <%= f.text_field :name ,style:"width:500px;margin-bottom:15px;color:#f8b195"%><br>
+    <%= f.text_field :name ,class:"edit-input"%><br>
 
     <%= f.label 'product price' %><br>
-    <%= f.text_field :price ,style:"width:500px;margin-bottom:15px;color:#f8b195" %><br>
+    <%= f.text_field :price ,class:"edit-input" %><br>
 
     <%= f.label 'product description' %><br>
-    <%= f.text_area :description ,style:"width:500px;margin-bottom:15px;color:#f8b195"%><br>
+    <%= f.text_area :description ,class:"edit-input"%><br>
 
     <div>
       <%= f.file_field :photo , style:"margin-left:100px;margin-bottom:15px;"%>

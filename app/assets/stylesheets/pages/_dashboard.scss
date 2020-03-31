@@ -34,6 +34,10 @@
   flex-direction:column
 }
 
+.booking-grid {
+  margin:30px;background:rgb(0, 115, 188);width:40%;padding:30px;border-radius:10px
+}
+
 @media screen and (max-width: 992px) {
   .white_border {
     border:none
@@ -46,5 +50,11 @@
 @media screen and (max-width: 600px) {
   .width_50 {
     width:100vw
+  }
+  .booking-grid {
+    width:80%
+  }
+  .show {
+    font-size:10px
   }
 }

@@ -1,7 +1,7 @@
 <div class="flex flex-column">
   <h1 class="text-center" style="margin-top:50px;margin-bottom:50px">My bookings history</h1>
   <% @bookings.each do |b| %>
-  <div class="text-center" style="margin:30px;background:rgb(0, 115, 188);width:40%;padding:30px;border-radius:10px">
+  <div class="text-center booking-grid">
     <h3><%=b.product.name%></h3>
     <div style="display:flex;justify-content: center;align-items: center;padding-top:10px">
       <p style="margin-right:4rem">Total: <%=b.product.price%> rmb</p>
