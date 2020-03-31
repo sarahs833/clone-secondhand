@@ -1,1 +1,38 @@
 // Specific CSS for your home-page
+.round-notification {
+  width: 150px;margin-left: 5px;text-align: center;height: 150px;background: black;border-radius: 50%;padding-top: 10px
+}
+.product-description {
+  width:100%;display:flex;justify-content: space-between;background: white;padding:20px
+}
+
+
+@media screen and (max-width: 992px) {
+.image-link {
+  margin-top:80px
+  }
+ .product-description {
+  margin-top:50px
+ }
+}
+
+@media screen and (max-width: 600px) {
+  .notification-icon {
+    width:20px;
+    height:20px
+  }
+  .notification-text{
+    font-size:10px
+  }
+  .round-notification {
+    transform: translate(145px, -90px);
+    width:80px;
+    height:80px
+  }
+  .image-link {
+    margin-top:0px
+  }
+  .product-description {
+    margin-top:50px
+  }
+}
