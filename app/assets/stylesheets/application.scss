@@ -44,3 +44,13 @@ body {
 .show {
   display:block
 }
+
+.chats:hover {
+  text-decoration:none;
+  border-bottom: 2px solid pink;
+}
+
+.chats:active {
+  text-decoration:none;
+  border-bottom: 2px solid pink;
+}

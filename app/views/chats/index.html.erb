@@ -1,11 +1,18 @@
+<div class="container" style="margin-top:30px">
+  <h1 class="text-center">Chats list</h1>
+</div>
+
 <div class="container chats_div">
   <% @chats.each do |chat| %>
   <div class="list-group">
       <button type="button" class="list-group-item list-group-item-action" style="display:flex;justify-content: space-between;align-items:center">
-        <%=link_to chat.name, chat_path(chat),class:'chats' , :data => { :ind => chat.id } %>
+        <%=link_to chat.name, chat_path(chat),class:'chats' ,style:"color:black", :data => { :ind => chat.id } %>
         <% chat.messages.each do |m| %>
           <% if m.new && (m.user_id != current_user.id) %>
-            <p class="show display" data-number=<%=chat.id%> >new message</p>
+            <div style="text-align: center;padding: 10px;">
+              <%= image_tag "notification.png" , style:"height:20px;width:20px"%>
+              <p class="show display" style="color:pink" data-number=<%=chat.id%> >new message</p>
+            </div>
           <%end%>
         <% end %>
       </button>
