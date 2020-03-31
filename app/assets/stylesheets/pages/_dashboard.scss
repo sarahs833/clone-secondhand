@@ -33,3 +33,18 @@
 .flex-column {
   flex-direction:column
 }
+
+@media screen and (max-width: 992px) {
+  .white_border {
+    border:none
+  }
+  .flex {
+    flex-direction:column
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .width_50 {
+    width:100vw
+  }
+}
