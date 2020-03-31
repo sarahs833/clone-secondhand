@@ -2,7 +2,10 @@
 <div class="banner">
   <h1 class="text-center" style="color:white;transform: translate(0px, 185px);text-shadow:1px 0px grey">Beyong your imaginations.</h1>
   <% if current_user && @answer%>
-    <p>You have new messages</p>
+    <div style="width: 150px;margin-left: 5px;text-align: center;height: 150px;background: black;border-radius: 50%;padding-top: 10px;">
+      <%=image_tag "notification.png" %>
+      <p>You have new messages</p>
+    </div>
   <%end%>
 </div>
 <h1 class="text-center" style="margin-bottom:30px;margin-top:30px">On sell products</h1>
