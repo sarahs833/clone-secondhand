@@ -7,8 +7,8 @@ class PagesController < ApplicationController
       .or(Chat.where(seller_id: current_user.id).includes(:messages))
 
       @user_chats.any? do |c|
-        c.messages.any? do |m|
-          m.new && m.user_id != current_user.id
+        @answer = c.messages.any? do |m|
+          m.new && (m.user_id != current_user.id)
         end
       end
     end
