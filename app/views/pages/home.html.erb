@@ -1,6 +1,9 @@
 
 <div class="banner">
   <h1 class="text-center" style="color:white;transform: translate(0px, 185px);text-shadow:1px 0px grey">Beyong your imaginations.</h1>
+  <% if current_user && @user_chats %>
+    <p>You have new messages</p>
+  <%end%>
 </div>
 <h1 class="text-center" style="margin-bottom:30px;margin-top:30px">On sell products</h1>
 <div class="container">

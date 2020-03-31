@@ -4,7 +4,7 @@
       <button type="button" class="list-group-item list-group-item-action" style="display:flex;justify-content: space-between;align-items:center">
         <%=link_to chat.name, chat_path(chat),class:'chats' , :data => { :ind => chat.id } %>
         <% chat.messages.each do |m| %>
-          <% if m.new && m.user_id != current_user.id %>
+          <% if m.new && (m.user_id != current_user.id) %>
             <p class="show display" data-number=<%=chat.id%> >new message</p>
           <%end%>
         <% end %>

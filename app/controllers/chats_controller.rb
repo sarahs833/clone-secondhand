@@ -6,7 +6,8 @@ class ChatsController < ApplicationController
      @seller_id = b.product.user_id == current_user.id
    end
     @chats = Chat.where(booker: current_user.id).includes(:messages)
-    .or(Chat.where(seller_id: @seller_id).includes(:messages))
+    .or(Chat.where(seller_id: current_user.id).includes(:messages))
+
   end
 
   def show

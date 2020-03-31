@@ -15,7 +15,7 @@ def create
      @seller_id = b.product.user_id == current_user.id
    end
     @chats = Chat.where(booker: current_user.id).includes(:messages)
-    .or(Chat.where(seller_id: @seller_id).includes(:messages))
+    .or(Chat.where(seller_id: current_user.id).includes(:messages))
   render "chats/index"
   # redirect_back(fallback_location: root_path)
 end
