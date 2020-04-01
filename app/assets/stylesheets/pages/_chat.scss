@@ -1,0 +1,33 @@
+.chat {
+  margin-left:300px
+}
+.chat-input {
+  width:600px
+}
+.button-blue {
+  width:150px
+}
+
+@media screen and (max-width: 992px) {
+  .chat {
+    margin-left:100px
+  }
+  .chat-input {
+    width:500px
+    }
+  .button-blue{
+    width:100px
+  }
+  }
+
+@media screen and (max-width: 600px) {
+  .chat {
+    margin-left:0px
+  }
+  .press {
+    margin-left:10px
+  }
+  .button-blue {
+    margin-top:10px
+  }
+}

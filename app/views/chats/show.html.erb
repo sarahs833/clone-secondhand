@@ -7,7 +7,7 @@
 <div class="row">
 
   <div class="col">
-    <div class="chat" style="margin-left:300px">
+    <div class="chat">
       <% @chat_messages.each do |chat_message| %>
         <div style="margin-bottom:10px;display:flex">
          <% if chat_message.user_id == current_user.id %>
@@ -34,9 +34,9 @@
       <%= form_for Message.new, :html => {:class => 'press'} do |f| %>
         <div class="input-group mb-3" style="display:flex;justify-content: center">
           <%= f.label "new message" %><br>
-          <%= f.text_field :content,class: 'chat-input',style:"width:600px;"%>
+          <%= f.text_field :content,class: 'chat-input'%>
           <div class="input-group-append">
-            <%= f.submit "Send", class: 'btn btn-primary chat-input' %>
+            <%= f.submit "Send", class: 'btn btn-primary chat-input button-blue' %>
           </div>
         </div>
         <%= f.hidden_field :chat_id,:value => @chat.id %>
