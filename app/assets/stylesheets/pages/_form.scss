@@ -11,6 +11,48 @@
 .edit-input {
     width:500px;margin-bottom:15px;color:#f8b195
   }
+.new_user {
+width:40%;
+margin-bottom:30px
+  }
+.login-form {
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:100px
+}
+.form-actions {
+  background-color: pink;
+    width: 150px;
+    height: 50px;
+    border-radius: 3px;
+    text-align: center;
+    padding-top:8px
+}
+.btn {
+  color:white
+}
+.sign-up {
+  color: white;
+  background: black;
+  width: 120px;
+  height: 40px;
+  padding-left: 30px;
+  padding-top: 8px;
+  border-radius: 5px;
+}
+.sign-up:hover {
+  color:white;
+  text-decoration:none;
+  background:rgb(0, 115, 188)
+}
+.password {
+  color:white
+}
+.password:hover {
+  color:white;
+}
 
 @media screen and (max-width: 992px) {
   .form-container {
@@ -19,6 +61,7 @@
   .edit-container {
     width:80%
   }
+
 }
 
 
