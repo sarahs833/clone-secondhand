@@ -10,11 +10,18 @@
 </div>
 <h1 class="text-center" style="margin-bottom:30px;margin-top:30px">On sell products</h1>
 <div class="container">
-
+  <div class="text-center">
     <%= form_for root_path , :method => 'get' do |f| %>
-      <%= f.text_field :query, 'name'=>'query' ,class:"input-field"%>
-    <%= f.submit "search" %>
+      <%= f.text_field :query, 'name'=>'query' ,class:"input-field",style:"height:35px;border:none" %>
+    <%= f.submit "search", style:"background: pink;
+    border: none;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;" %>
     <% end %>
+  </div>
   <div class="row">
     <% @products.each do |p| %>
     <div class="col custom-card" style="display:flex;flex-direction:column;margin:10px;">
