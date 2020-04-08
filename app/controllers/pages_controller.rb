@@ -1,7 +1,16 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
+
   def home
-    @products = Product.all
+
+    if params[:query].nil? or params[:query] == ""
+      @products = Product.all
+    else
+      @products = Product.search_by_name_description(params[:query])
+
+
+    end
+
     if current_user
       @user_chats = Chat.where(booker: current_user.id).includes(:messages)
       .or(Chat.where(seller_id: current_user.id).includes(:messages))
@@ -13,6 +22,7 @@ class PagesController < ApplicationController
       end
     end
   end
+
   def showproduct
     @product = Product.find(params[:id])
     if @product.user_id == current_user.id

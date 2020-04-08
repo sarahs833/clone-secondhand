@@ -10,6 +10,11 @@
 </div>
 <h1 class="text-center" style="margin-bottom:30px;margin-top:30px">On sell products</h1>
 <div class="container">
+
+    <%= form_for root_path , :method => 'get' do |f| %>
+      <%= f.text_field :query, 'name'=>'query' ,class:"input-field"%>
+    <%= f.submit "search" %>
+    <% end %>
   <div class="row">
     <% @products.each do |p| %>
     <div class="col custom-card" style="display:flex;flex-direction:column;margin:10px;">
