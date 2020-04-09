@@ -178,3 +178,12 @@ margin-bottom:30px
   border-radius: 3px;
 }
 }
+
+@media screen and (max-width:414px) {
+  .form-container {
+    margin-left:0px
+  }
+  .edit-container {
+    margin-left:0px
+  }
+}

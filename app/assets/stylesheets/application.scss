@@ -18,7 +18,7 @@
   height:70vh;
   width:100vw;
   background-position:center;
-  background-size:cover
+  background-size:cover;
 }
 
 body {
@@ -34,8 +34,20 @@ body {
   border-radius:5px
 }
 
-.display{
+@media screen and (max-width:414px) {
+  .product-description {
+    margin-top:0px;
+    height:20px
+  }
+  .main-header {
+    font-size:30px
+  }
+  .search {
+    margin-top:20px;
+    margin-bottom:20px
+  }
 }
+
 
 .display_none {
   display:none

@@ -8,10 +8,10 @@
     </div>
   <%end%>
 </div>
-<h1 class="text-center" style="margin-bottom:30px;margin-top:30px">On sell products</h1>
+<h1 class="text-center main-header" style="margin-bottom:30px;margin-top:30px">On sell products</h1>
 <div class="container">
   <div class="text-center">
-    <%= form_for root_path , :method => 'get' do |f| %>
+    <%= form_for root_path , :method => 'get', :html => { :class => "search"} do |f| %>
       <%= f.text_field :query, 'name'=>'query' ,class:"input-field",style:"height:35px;border:none" %>
     <%= f.submit "search", style:"background: pink;
     border: none;
