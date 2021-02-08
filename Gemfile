@@ -18,7 +18,7 @@ gem 'devise'
 gem "bootstrap_form", "~> 4.0"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'rails_12factor', group: :production
 gem 'pg_search', '~> 2.3.0'
 
